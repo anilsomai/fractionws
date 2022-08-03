@@ -13,6 +13,16 @@ import java.util.Random;
 @RestController
 public class FractionWS {
 
+    @GetMapping(path="/health")
+    public Mono<String> health() {
+        return Mono.just("running");
+    }
+
+    @GetMapping(path="/")
+    public Mono<String> test() {
+        return Mono.just("running");
+    }
+
     @PostMapping(path="/calc")
     public Mono<List<String>> calc(@RequestBody Input input) {
         List<String> result = new ArrayList<>();
