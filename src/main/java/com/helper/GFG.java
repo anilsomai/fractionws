@@ -27,13 +27,13 @@ public class GFG
     }
 
     // Driver Code
-    public static void main(String[] args)
+    /*public static void main(String[] args)
     {
         int x = 16;
         int y = 10;
 
         reduceFraction(x, y);
-    }
+    }*/
 }
 
 /* This code contributed by PrinciRaj1992 */
