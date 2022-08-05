@@ -1,5 +1,4 @@
-com\service\FractionWS.class
 com\entities\Input.class
 com\FractionApplication.class
-com\helper\GFG.class
-com\sample\service\HelloController.class
+com\service\FractionWS.class
+com\helper\Gfg.class

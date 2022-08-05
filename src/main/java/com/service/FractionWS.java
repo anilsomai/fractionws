@@ -1,17 +1,17 @@
 package com.service;
 
 import com.entities.Input;
-import com.helper.GFG;
+import com.helper.Gfg;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Random;
 
 @RestController
 public class FractionWS {
+
+    Gfg gfg = new Gfg();
 
     @GetMapping(path="/health")
     public Mono<String> health() {
@@ -33,10 +33,10 @@ public class FractionWS {
 
         result.add("" + num1 + " / " + deno1 + "   +   " + num2 + " / " + deno2);
         // find multiples of num1 and deno1
-        int gcd1 = GFG.reduceFraction(num1, deno1);
+        int gcd1 = gfg.reduceFraction(num1, deno1);
 
         result.add("GCD of " + num1 + " and " + deno1 +" is " + gcd1);
-        int gcd2 = GFG.reduceFraction(num2, deno2);
+        int gcd2 = gfg.reduceFraction(num2, deno2);
         result.add("GCD of " + num2 + " and " + deno2 +" is " + gcd2);
 
         result.add("");
@@ -80,7 +80,7 @@ public class FractionWS {
         result.add("=> (" + num1 + " + " + num2 + ") / " + deno);
         result.add("=> " + num + " / " + deno);
 
-        int gcd = GFG.reduceFraction(num, deno);
+        int gcd = gfg.reduceFraction(num, deno);
         result.add("");
         result.add("GCD of " + num + " and " + deno + " is " + gcd);
         result.add("Final answer is " + num/gcd + " / " + deno/gcd);
